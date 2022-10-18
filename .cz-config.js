@@ -1,46 +1,69 @@
 module.exports = {
   types: [
-    { value: 'init', name: 'init:     项目初始化' },
-    { value: 'feat', name: 'feat:     添加新特性' },
-    { value: 'fix', name: 'fix:      修复bug' },
-    { value: 'docs', name: 'docs:     仅仅修改文档' },
-    { value: 'style', name: 'style:    仅仅修改了空格、格式缩进、逗号等等，不改变代码逻辑' },
-    { value: 'refactor', name: 'refactor: 代码重构，没有加新功能或者修复bug' },
-    { value: 'perf', name: 'perf:     优化相关，比如提升性能、体验' },
-    { value: 'test', name: 'test:     添加测试用例' },
-    { value: 'build', name: 'build:    依赖相关的内容' },
-    { value: 'ci', name: 'ci:       CI配置相关，例如对k8s，docker的配置文件的修改' },
-    { value: 'chore', name: 'chore:    改变构建流程、或者增加依赖库、工具等' },
-    { value: 'revert', name: 'revert:   回滚到上一个版本' }
-  ],
-  scopes: [
-		['projects', '项目搭建'],
-    ['components', '组件相关'],
-    ['hooks', 'hook 相关'],
-    ['utils', 'utils 相关'],
-    ['types', 'ts类型相关'],
-    ['styles', '样式相关'],
-    ['deps', '项目依赖'],
-    ['auth', '对 auth 修改'],
-    ['other', '其他修改'],
-    ['custom', '以上都不是？我要自定义']
-  ].map(([value, description]) => {
-    return {
-      value,
-      name: `${value.padEnd(30)} (${description})`
+    {
+      value: '🎉 init',
+      name: '🎉 init: 初始化'
+    },
+    {
+      value: '✨ feat',
+      name: '✨ feat: 新功能'
+    },
+    {
+      value: '🐞 fix',
+      name: '🐞 fix: 修复bug'
+    },
+    {
+      value: '💡 perf',
+      name: '💡 perf: 改进优化相关,比如提升性能、体验'
+    },
+    {
+      value: '🚧 wip',
+      name: '🚧 wip: 正在进行中的工作'
+    },
+    {
+      value: '🚨 test',
+      name: '🚨 test: 测试，实验'
+    },
+    {
+      value: '🔧 chore',
+      name: '🔧 chore: 构建/工程依赖/工具'
+    },
+    {
+      value: '💄 style',
+      name: '💄 style: 代码的样式美化(标记、空白、格式化、缺少分号……)'
+    },
+    {
+      value: '🔖 release',
+      name: '🔖 release: 发布版本'
+    },
+    {
+      value: '🚚 move',
+      name: '🚚 move: 移动或删除文件'
+    },
+    {
+      value: '⏪ revert',
+      name: '⏪ revert: 回退'
+    },
+    {
+      value: '🔀 merge',
+      name: '🔀 merge: 合并分支or合并模板'
+    },
+    {
+      value: '📝 docs',
+      name: '📝 docs: 文档变更'
     }
-  }),
+  ],
+  scopes: ['框架', '公共组件'], // 项目模块名可写在这里 方便快捷选择
+  skipQuestions: ['body', 'footer'],
   messages: {
-    type: '确保本次提交遵循 Angular 规范！\n选择你要提交的类型：',
-    scope: '\n选择一个 scope（可选）：',
-    customScope: '请输入自定义的 scope：',
-    subject: '填写简短精炼的变更描述：\n',
-    body: '填写更加详细的变更描述（可选）。使用 "|" 换行：\n',
-    breaking: '列举非兼容性重大的变更（可选）：\n',
-    footer: '列举出所有变更的 ISSUES CLOSED（可选）。 例如: #31, #34：\n',
-    confirmCommit: '确认提交？'
+    type: '选择一种你的提交类型( 必选 ❗):',
+    scope: '请选择修改范围(支持自定义)\n 💬 业务项目中依据菜单或者功能模块划分(可选)：\n',
+    subject: '请简要描述提交( 必填 ❗)：\n',
+    body: '请输入详细描述使用," | "换行(可选)：\n',
+    breaking: '列出任何BREAKING CHANGES(可选)：\n',
+    confirmCommit: '确定提交此说明吗？'
   },
-  allowBreakingChanges: ['feat', 'fix'],
-  subjectLimit: 100,
-  breaklineChar: '|'
-}
+  allowCustomScopes: true,
+  allowBreakingChanges: ['feat', 'fix'], // 当提交类型为feat、fix时才有破坏性修改选项
+  subjectLimit: 72
+};
