@@ -14,5 +14,9 @@
   "path-intellisense.mappings": {
     "@": "${workspaceFolder}/src",
     "~@": "${workspaceFolder}/src"
+  },
+  // 配置unocss代码提示
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }
