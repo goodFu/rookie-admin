@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [],
+  extends: ['@commitlint/config-conventional'],
   rules: {
     'type-enum': [
       2, //代表必须输入

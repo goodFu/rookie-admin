@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@commitlint/cli': ^17.1.2
+  '@commitlint/config-conventional': ^17.1.0
   '@types/lodash-es': ^4.17.6
   '@types/node': ^18.8.2
   '@typescript-eslint/eslint-plugin': ^5.39.0
@@ -44,6 +45,7 @@ dependencies:
 
 devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.1.2
+  '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.1.0
   '@types/lodash-es': 4.17.6
   '@types/node': 18.8.2
   '@typescript-eslint/eslint-plugin': 5.39.0_xyciw6oqjoiiono4dhv3uhn5my
@@ -2812,6 +2814,15 @@ packages:
       - '@swc/wasm'
     dev: true
 
+  registry.npmmirror.com/@commitlint/config-conventional/17.1.0:
+    resolution: {integrity: sha512-WU2p0c9/jLi8k2q2YrDV96Y8XVswQOceIQ/wyJvQxawJSCasLdRB3kUIYdNjOCJsxkpoUlV/b90ZPxp1MYZDiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/config-conventional/-/config-conventional-17.1.0.tgz}
+    name: '@commitlint/config-conventional'
+    version: 17.1.0
+    engines: {node: '>=v14'}
+    dependencies:
+      conventional-changelog-conventionalcommits: registry.npmmirror.com/conventional-changelog-conventionalcommits/5.0.0
+    dev: true
+
   registry.npmmirror.com/@commitlint/config-validator/17.1.0:
     resolution: {integrity: sha512-Q1rRRSU09ngrTgeTXHq6ePJs2KrI+axPTgkNYDWSJIuS1Op4w3J30vUfSXjwn5YEJHklK3fSqWNHmBhmTR7Vdg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/config-validator/-/config-validator-17.1.0.tgz}
     name: '@commitlint/config-validator'
@@ -3490,6 +3501,17 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       compare-func: registry.npmmirror.com/compare-func/2.0.0
+      q: registry.npmmirror.com/q/1.5.1
+    dev: true
+
+  registry.npmmirror.com/conventional-changelog-conventionalcommits/5.0.0:
+    resolution: {integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-5.0.0.tgz}
+    name: conventional-changelog-conventionalcommits
+    version: 5.0.0
+    engines: {node: '>=10'}
+    dependencies:
+      compare-func: registry.npmmirror.com/compare-func/2.0.0
+      lodash: registry.npmmirror.com/lodash/4.17.21
       q: registry.npmmirror.com/q/1.5.1
     dev: true
 
