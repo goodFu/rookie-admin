@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .eslintcache
+*.yaml
+pnpm-lock.yaml
 
 # Editor directories and files
 .idea
