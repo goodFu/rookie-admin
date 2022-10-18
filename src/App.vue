@@ -1,5 +1,5 @@
 <template>
-  <div class="aaa">1112wer</div>
+  <div class="aaa">1112w22er</div>
   <SvgIcon name="sun" color="#ff0000" :size="40" />
 </template>
 
