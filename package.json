@@ -3,8 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "cross-env VITE_APP_ENV=development vite --mode development",
+    "build": "npm run typecheck && cross-env VITE_APP_ENV=production vite build --mode production",
+    "build:test": "npm run typecheck && cross-env VITE_APP_ENV=test vite build --mode test",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "preview": "vite preview",
     "lint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "git:push": "git add -A && git cz && git pull && git push"
