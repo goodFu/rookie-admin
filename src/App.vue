@@ -2,7 +2,7 @@
   <div class="aaa">111</div>
   <SvgIcon name="sun" color="#ff0000" :size="40" />
   <div class="w-100px h-100px border pink">恭喜你中了100万</div>
-  <div class="i-ri-bug-line text-3xl bg-green-500 bg"></div>
+  <div class="i-ri-bug-line text-3xl bg-green-500"></div>
 </template>
 
 <script setup lang="ts">
