@@ -7,6 +7,9 @@
 
 <script setup lang="ts">
 import SvgIcon from './components/Icon';
+let num = ref(0);
+let num2 = reactive({ a: 2 });
+console.log('num => ', num, num2);
 </script>
 
 <style scoped>

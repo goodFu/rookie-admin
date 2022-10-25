@@ -6,7 +6,8 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 export function configAutoImport() {
   const autoImportPlugins = AutoImport({
-    imports: ['vue']
+    imports: ['vue'],
+    dts: './types/auto-imports.d.ts'
   });
   return autoImportPlugins;
 }
