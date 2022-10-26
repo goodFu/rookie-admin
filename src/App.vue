@@ -3,13 +3,16 @@
   <SvgIcon name="sun" color="#ff0000" :size="40" />
   <div class="w-100px h-100px border pink">恭喜你中了100万</div>
   <div class="i-ri-bug-line text-3xl bg-green-500"></div>
+  <div @click="testMock">test</div>
 </template>
 
 <script setup lang="ts">
+import axios from 'axios';
 import SvgIcon from './components/Icon';
-let num = ref(0);
-let num2 = reactive({ a: 2 });
-console.log('num => ', num, num2);
+
+const testMock = () => {
+  axios.post('/api/text');
+};
 </script>
 
 <style scoped>
