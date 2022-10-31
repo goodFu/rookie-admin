@@ -1,11 +1,11 @@
 <template>
-  <header class="admin-layout-header" :style="style">
+  <footer class="admin-layout-footer" :style="style">
     <slot></slot>
-  </header>
+  </footer>
 </template>
 
 <script setup lang="ts">
-defineOptions({ name: 'LayoutHeader' });
+defineOptions({ name: 'LayoutFooter' });
 
 interface Props {
   /** 开启fixed布局 */
@@ -28,7 +28,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   fixed: true,
-  zIndex: 1001,
+  zIndex: 999,
   minWidth: 1200,
   height: 56,
   paddingLeft: 0,
@@ -53,8 +53,8 @@ const style = computed(() => {
 </script>
 
 <style scoped>
-.admin-layout-header {
-  top: 0;
+.admin-layout-footer {
+  bottom: 0;
   left: 0;
   box-sizing: border-box;
   flex-shrink: 0;

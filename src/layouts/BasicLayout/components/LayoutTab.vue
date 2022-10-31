@@ -1,15 +1,17 @@
 <template>
-  <header class="admin-layout-header" :style="style">
+  <div class="admin-layout-tab" :style="style">
     <slot></slot>
-  </header>
+  </div>
 </template>
 
 <script setup lang="ts">
-defineOptions({ name: 'LayoutHeader' });
+defineOptions({ name: 'LayoutTab' });
 
 interface Props {
   /** 开启fixed布局 */
   fixed?: boolean;
+  /** fixed布局的top距离 */
+  top?: number;
   /** fixed布局的层级 */
   zIndex?: number;
   /** 是否启用最小宽度的布局 */
@@ -28,7 +30,8 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   fixed: true,
-  zIndex: 1001,
+  top: 56,
+  zIndex: 999,
   minWidth: 1200,
   height: 56,
   paddingLeft: 0,
@@ -39,6 +42,7 @@ const props = withDefaults(defineProps<Props>(), {
 const style = computed(() => {
   const {
     fixed,
+    top,
     zIndex,
     minWidth,
     height,
@@ -47,14 +51,12 @@ const style = computed(() => {
     transitionTimingFunction
   } = props;
   const position = fixed ? 'fixed' : 'static';
-  const minWidthStyle = props.useMinWidthLayout ? `min-width:${minWidth}px;` : '';
-  return `position:${position};z-index:${zIndex};${minWidthStyle}height:${height}px;padding-left:${paddingLeft}px;transition-duration:${transitionDuration}ms;transition-timing-function:${transitionTimingFunction};`;
+  const minWidthStyle = props.useMinWidthLayout ? `min-width: ${minWidth}px;` : '';
+  return `position:${position};top:${top}px;z-index:${zIndex};${minWidthStyle}height:${height}px;padding-left:${paddingLeft}px;transition-duration:${transitionDuration}ms;transition-timing-function:${transitionTimingFunction};`;
 });
 </script>
-
 <style scoped>
-.admin-layout-header {
-  top: 0;
+.admin-layout-tab {
   left: 0;
   box-sizing: border-box;
   flex-shrink: 0;
