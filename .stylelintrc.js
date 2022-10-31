@@ -7,4 +7,4 @@ module.exports = {
     'stylelint-config-recess-order',
     'stylelint-config-prettier'
   ]
-}
+};
