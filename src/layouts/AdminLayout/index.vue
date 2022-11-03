@@ -55,10 +55,12 @@
     </div>
     <div v-for="i in 50" :key="i" class="text-center">{{ i }}</div>
   </BasicLayout>
+  <SettingDrawer />
 </template>
 
 <script setup lang="ts">
 import BasicLayout from '../BasicLayout/index.vue';
+import SettingDrawer from '../common/SettingDrawer/index.vue';
 import { useBoolean } from '../BasicLayout/hooks';
 
 type Mode = 'vertical' | 'horizontal';

@@ -15,3 +15,10 @@ declare interface ViteEnv {
   VITE_USE_IMAGEMIN: boolean;
   VITE_GENERATE_UI: string;
 }
+
+interface Window {
+  $loadingBar?: import('naive-ui').LoadingBarProviderInst;
+  $dialog?: import('naive-ui').DialogProviderInst;
+  $message?: import('naive-ui').MessageProviderInst;
+  $notification?: import('naive-ui').NotificationProviderInst;
+}
