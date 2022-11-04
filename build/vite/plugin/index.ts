@@ -1,6 +1,7 @@
 import type { Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import unocss from '@unocss/vite';
+import Icons from 'unplugin-icons/vite';
 import DefineOptions from 'unplugin-vue-define-options/vite';
 import Components from 'unplugin-vue-components/vite';
 import { configSvgIconsPlugin } from './svgSprite';
@@ -14,7 +15,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     vue(),
     unocss(),
     DefineOptions(),
+    Icons(),
     Components({
+      dts: './types/components.d.ts',
       resolvers: [NaiveUiResolver()]
     })
   ];

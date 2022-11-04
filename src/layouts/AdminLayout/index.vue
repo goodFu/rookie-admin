@@ -53,7 +53,7 @@
         <input type="checkbox" :checked="siderCollapse" @change="toggleSiderCollapse" />
       </div>
     </div>
-    <div v-for="i in 50" :key="i" class="text-center">{{ i }}</div>
+    <SvgIcon name="sun" color="#ff0000" :size="40" />
   </BasicLayout>
   <SettingDrawer />
 </template>

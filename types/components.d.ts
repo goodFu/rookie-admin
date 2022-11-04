@@ -7,21 +7,26 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    NAvatar: typeof import('naive-ui')['NAvatar']
+    NaiveProvider: typeof import('./../src/components/common/NaiveProvider.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
-    NCard: typeof import('naive-ui')['NCard']
+    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NDialogProvider: typeof import('naive-ui')['NDialogProvider']
+    NDivider: typeof import('naive-ui')['NDivider']
     NDrawer: typeof import('naive-ui')['NDrawer']
     NDrawerContent: typeof import('naive-ui')['NDrawerContent']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
     NInput: typeof import('naive-ui')['NInput']
+    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
+    NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
     NRadioButton: typeof import('naive-ui')['NRadioButton']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NSpace: typeof import('naive-ui')['NSpace']
+    NSwitch: typeof import('naive-ui')['NSwitch']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SvgIcon: typeof import('./src/components/Icon/src/SvgIcon.vue')['default']
-    Test: typeof import('./src/components/test/index.vue')['default']
+    SvgIcon: typeof import('./../src/components/Icon/src/SvgIcon.vue')['default']
+    Test: typeof import('./../src/components/test/index.vue')['default']
   }
 }

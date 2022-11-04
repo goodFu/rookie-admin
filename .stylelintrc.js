@@ -6,5 +6,8 @@ module.exports = {
     'stylelint-config-recommended-vue',
     'stylelint-config-recess-order',
     'stylelint-config-prettier'
-  ]
+  ],
+  rules: {
+    'selector-class-pattern': null
+  }
 };
