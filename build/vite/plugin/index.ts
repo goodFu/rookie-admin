@@ -3,11 +3,11 @@ import vue from '@vitejs/plugin-vue';
 import unocss from '@unocss/vite';
 import Icons from 'unplugin-icons/vite';
 import DefineOptions from 'unplugin-vue-define-options/vite';
-import Components from 'unplugin-vue-components/vite';
+
 import { configSvgIconsPlugin } from './svgSprite';
 import { configAutoImport } from './autoImport';
 import { configMockPlugin } from './mock';
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import { configComponentsPlugins } from './components';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const vitePlugins: (Plugin | Plugin[])[] = [
@@ -15,11 +15,7 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     vue(),
     unocss(),
     DefineOptions(),
-    Icons(),
-    Components({
-      dts: './types/components.d.ts',
-      resolvers: [NaiveUiResolver()]
-    })
+    Icons()
   ];
 
   // vite-plugin-svg-icons
@@ -30,6 +26,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // mock
   vitePlugins.push(configMockPlugin(isBuild));
+
+  //auto-import-components
+  vitePlugins.push(configComponentsPlugins());
 
   return vitePlugins;
 }

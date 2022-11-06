@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-y-center justify-between">
+  <div class="flex items-center justify-between">
     <span>{{ label }}</span>
     <slot></slot>
   </div>

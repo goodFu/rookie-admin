@@ -5,8 +5,7 @@
     :width="330"
     @mask-click="app.closeSettingDrawer"
   >
-    <n-drawer-content title="主题配置" :native-scrollbar="false" />
-    <DarkMode />
+    <n-drawer-content title="主题配置" :native-scrollbar="false"><DarkMode /></n-drawer-content>
   </n-drawer>
   <DrawerButton />
 </template>

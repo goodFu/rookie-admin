@@ -53,6 +53,8 @@
         <input type="checkbox" :checked="siderCollapse" @change="toggleSiderCollapse" />
       </div>
     </div>
+    <icon-ri-sun-fill class="text-testColor" />
+    <icon-ri-sun-line class="text-14px text-primary" />
     <SvgIcon name="sun" color="#ff0000" :size="40" />
   </BasicLayout>
   <SettingDrawer />

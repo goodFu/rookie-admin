@@ -37,7 +37,8 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
       rollupOptions: {
         output: {
           manualChunks: {
-            'lodash-es': ['lodash-es']
+            'lodash-es': ['lodash-es'],
+            'naive-ui': ['naive-ui']
           }
         }
       },
