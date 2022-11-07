@@ -47,7 +47,7 @@ export default defineConfig(({ command, mode }: ConfigEnv) => {
       chunkSizeWarningLimit: 1000
     },
     esbuild: {
-      drop: ['console', 'debugger']
+      drop: isBuild ? ['console', 'debugger'] : []
     },
     plugins: createVitePlugins(viteEnv, isBuild)
   };

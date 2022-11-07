@@ -7,13 +7,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    IconIcBaselineDoNotDisturb: typeof import('~icons/ic/baseline-do-not-disturb')['default']
-    IconIcForbidLine: typeof import('~icons/ic/forbid-line')['default']
-    IconIcRoundHdrAuto: typeof import('~icons/ic/round-hdr-auto')['default']
     IconRiForbidLine: typeof import('~icons/ri/forbid-line')['default']
     IconRiMoonLine: typeof import('~icons/ri/moon-line')['default']
     IconRiNotificationBadgeFill: typeof import('~icons/ri/notification-badge-fill')['default']
-    IconRiRoundHdrAuto: typeof import('~icons/ri/round-hdr-auto')['default']
     IconRiSunFill: typeof import('~icons/ri/sun-fill')['default']
     IconRiSunLine: typeof import('~icons/ri/sun-line')['default']
     NaiveProvider: typeof import('./../src/components/common/NaiveProvider.vue')['default']
