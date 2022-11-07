@@ -15,9 +15,9 @@
 <script setup lang="ts">
 import AdminLayout from './layouts/AdminLayout/index.vue';
 import { dateZhCN, zhCN } from 'naive-ui';
-import { useThemeStore } from '@/store';
+import { useThemeStore, subscribeStore } from '@/store';
 
 const theme = useThemeStore();
 
-// subscribeStore();
+subscribeStore();
 </script>

@@ -15,7 +15,6 @@ export const useThemeStore = defineStore('theme-store', {
     /** naiveUI的主题配置 */
     naiveThemeOverrides(state) {
       const overrides = getNaiveThemeOverrides({ primary: state.themeColor, ...state.otherColor });
-      console.log('overrides => ', overrides);
       return overrides;
     },
     /** naive-ui暗黑主题 */

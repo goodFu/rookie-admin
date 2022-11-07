@@ -5,14 +5,16 @@
     :width="330"
     @mask-click="app.closeSettingDrawer"
   >
-    <n-drawer-content title="主题配置" :native-scrollbar="false"><DarkMode /></n-drawer-content>
+    <n-drawer-content title="主题配置" :native-scrollbar="false">
+      <DarkMode /> <LayoutMode
+    /></n-drawer-content>
   </n-drawer>
   <DrawerButton />
 </template>
 
 <script setup lang="ts">
 import { useAppStore } from '@/store';
-import { DrawerButton, DarkMode } from './components';
+import { DrawerButton, DarkMode, LayoutMode } from './components';
 const app = useAppStore();
 defineOptions({ name: 'SettingDrawer' });
 </script>
