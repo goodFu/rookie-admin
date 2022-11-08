@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DarkModeContainer: typeof import('./../src/components/common/DarkModeContainer.vue')['default']
+    HoverContainer: typeof import('./../src/components/common/HoverContainer.vue')['default']
     IconRiCheckLine: typeof import('~icons/ri/check-line')['default']
     IconRiForbidLine: typeof import('~icons/ri/forbid-line')['default']
     IconRiMoonLine: typeof import('~icons/ri/moon-line')['default']
@@ -23,6 +24,7 @@ declare module '@vue/runtime-core' {
     NDivider: typeof import('naive-ui')['NDivider']
     NDrawer: typeof import('naive-ui')['NDrawer']
     NDrawerContent: typeof import('naive-ui')['NDrawerContent']
+    NDropdown: typeof import('naive-ui')['NDropdown']
     NGradientText: typeof import('naive-ui')['NGradientText']
     NGrid: typeof import('naive-ui')['NGrid']
     NGridItem: typeof import('naive-ui')['NGridItem']

@@ -22,7 +22,7 @@
       <system-message />
       <setting-button />
       <user-avatar /> -->
-      123
+      <UserAvatar />
     </div>
   </DarkModeContainer>
 </template>
@@ -42,6 +42,7 @@ import GlobalLogo from '../GlobalLogo/index.vue';
 // // ThemeMode,
 // // UserAvatar
 // './components';
+import { UserAvatar } from './components';
 
 defineOptions({ name: 'GlobalHeader' });
 
