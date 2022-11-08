@@ -1,19 +1,23 @@
 <template>
-  <div class="aaa">1112</div>
-  <SvgIcon name="sun" color="#ff0000" :size="40" />
+  <n-config-provider
+    :theme="theme.naiveTheme"
+    :theme-overrides="theme.naiveThemeOverrides"
+    :locale="zhCN"
+    :date-locale="dateZhCN"
+    class="h-full"
+  >
+    <NaiveProvider>
+      <AdminLayout />
+    </NaiveProvider>
+  </n-config-provider>
 </template>
 
 <script setup lang="ts">
-import SvgIcon from './components/Icon';
-</script>
+import AdminLayout from './layouts/AdminLayout/index.vue';
+import { dateZhCN, zhCN } from 'naive-ui';
+import { useThemeStore, subscribeStore } from '@/store';
 
-<style scoped>
-.aaa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  border: 1px solid #f00;
-}
-</style>
+const theme = useThemeStore();
+
+subscribeStore();
+</script>

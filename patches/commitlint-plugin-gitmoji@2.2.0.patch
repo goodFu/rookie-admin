@@ -1,0 +1,13 @@
+diff --git a/lib/gitmojiCode.js b/lib/gitmojiCode.js
+index 93037c663e99d4d16b60f4cee9ebf6836b09a29d..ec641d42030826b017ae317b95380bc0c6b81b51 100644
+--- a/lib/gitmojiCode.js
++++ b/lib/gitmojiCode.js
+@@ -29,7 +29,7 @@ var filePath = gitmojiPath ? path_1.join(process.cwd(), gitmojiPath) : // or use
+ path_1.join(__dirname, 'gitmojis.json'); // Download gitmojis.json if it doesn't exist yet
+ 
+ if (!fs_1.existsSync(filePath)) {
+-  var url = process.env.GITMOJI_URL || 'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json';
++  var url = process.env.GITMOJI_URL || 'https://tianli-lida-children.oss-cn-chengdu.aliyuncs.com/other/gitmojis.json';
+ 
+   try {
+     // eslint-disable-next-line global-require

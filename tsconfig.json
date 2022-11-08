@@ -12,7 +12,11 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["unplugin-vue-define-options/macros-global"]
   },
   "include": [
     "src/**/*.ts",

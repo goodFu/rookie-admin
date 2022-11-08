@@ -4,6 +4,7 @@ node_modules
 *.md
 *.woff
 *.ttf
+*.yaml
 .vscode
 .idea
 dist
@@ -12,3 +13,4 @@ dist
 .local
 /bin
 Dockerfile
+.eslintcache
