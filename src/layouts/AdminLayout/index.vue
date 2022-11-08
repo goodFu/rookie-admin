@@ -15,7 +15,7 @@
     @update:sider-collapse="app.setSiderCollapse"
   >
     <template #header>
-      <div class="flex-center h-full bg-#e6e6e6">Header</div>
+      <GlobalHeader v-bind="headerProps" />
     </template>
     <template #tab>
       <div class="flex-center h-full bg-#cccccc">Tab</div>
@@ -41,12 +41,13 @@
       <n-button type="error"> Error </n-button>
     </n-space>
   </BasicLayout>
+  <GlobalBackTop />
   <SettingDrawer />
 </template>
 
 <script setup lang="ts">
 import BasicLayout from '../BasicLayout/index.vue';
-import { SettingDrawer } from '../common';
+import { SettingDrawer, GlobalBackTop, GlobalHeader } from '../common';
 import { useAppStore, useThemeStore } from '@/store';
 import { useBasicLayout } from '@/config';
 import { useBoolean } from '../BasicLayout/hooks';
@@ -57,5 +58,6 @@ const app = useAppStore();
 const theme = useThemeStore();
 
 const { bool: addMainOverflowHidden } = useBoolean();
-const { mode, isMobile, siderVisible, siderWidth, siderCollapsedWidth } = useBasicLayout();
+const { mode, isMobile, siderVisible, siderWidth, siderCollapsedWidth, headerProps } =
+  useBasicLayout();
 </script>

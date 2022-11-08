@@ -7,7 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    IconIcOutlineCheck: typeof import('~icons/ic/outline-check')['default']
+    DarkModeContainer: typeof import('./../src/components/common/DarkModeContainer.vue')['default']
     IconRiCheckLine: typeof import('~icons/ri/check-line')['default']
     IconRiForbidLine: typeof import('~icons/ri/forbid-line')['default']
     IconRiMoonLine: typeof import('~icons/ri/moon-line')['default']
@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     IconRiSunFill: typeof import('~icons/ri/sun-fill')['default']
     IconRiSunLine: typeof import('~icons/ri/sun-line')['default']
     NaiveProvider: typeof import('./../src/components/common/NaiveProvider.vue')['default']
+    NBackTop: typeof import('naive-ui')['NBackTop']
     NButton: typeof import('naive-ui')['NButton']
     NColorPicker: typeof import('naive-ui')['NColorPicker']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
@@ -37,6 +38,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./../src/components/Icon/src/SvgIcon.vue')['default']
+    SystemLogo: typeof import('./../src/components/common/SystemLogo.vue')['default']
     Test: typeof import('./../src/components/test/index.vue')['default']
   }
 }
