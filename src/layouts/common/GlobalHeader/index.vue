@@ -20,8 +20,8 @@
       <full-screen />
       <theme-mode />
       <system-message />
-      <setting-button />
-      <user-avatar /> -->
+      <setting-button /> -->
+      <SettingButton />
       <UserAvatar />
     </div>
   </DarkModeContainer>
@@ -42,7 +42,7 @@ import GlobalLogo from '../GlobalLogo/index.vue';
 // // ThemeMode,
 // // UserAvatar
 // './components';
-import { UserAvatar } from './components';
+import { UserAvatar, SettingButton } from './components';
 
 defineOptions({ name: 'GlobalHeader' });
 

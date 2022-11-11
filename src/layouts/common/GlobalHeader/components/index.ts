@@ -1,2 +1,3 @@
 import UserAvatar from './UserAvatar.vue';
-export { UserAvatar };
+import SettingButton from './SettingButton.vue';
+export { UserAvatar, SettingButton };
