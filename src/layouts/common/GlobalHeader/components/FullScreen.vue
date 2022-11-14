@@ -1,8 +1,13 @@
 <template>
-  <hover-container class="w-40px h-full" tooltip-content="全屏" :inverted="theme.header.inverted" @click="toggle">
-    <icon-gridicons-fullscreen-exit v-if="isFullscreen" class="text-18px" />
-    <icon-gridicons-fullscreen v-else class="text-18px" />
-  </hover-container>
+  <HoverContainer
+    class="w-40px h-full"
+    tooltip-content="全屏"
+    :inverted="theme.header.inverted"
+    @click="toggle"
+  >
+    <icon-ri-fullscreen-exit-fill v-if="isFullscreen" class="text-18px" />
+    <icon-ri-fullscreen-fill v-else class="text-18px" />
+  </HoverContainer>
 </template>
 
 <script lang="ts" setup>
@@ -14,5 +19,3 @@ defineOptions({ name: 'FullScreen' });
 const { isFullscreen, toggle } = useFullscreen();
 const theme = useThemeStore();
 </script>
-
-<style scoped></style>

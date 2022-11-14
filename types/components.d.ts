@@ -8,11 +8,16 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DarkModeContainer: typeof import('./../src/components/common/DarkModeContainer.vue')['default']
+    DarkModeSwitch: typeof import('./../src/components/common/DarkModeSwitch.vue')['default']
     GResize: typeof import('./../src/components/global/g-resize.vue')['default']
     HoverContainer: typeof import('./../src/components/common/HoverContainer.vue')['default']
     IconAntDesignSettingOutlined: typeof import('~icons/ant-design/setting-outlined')['default']
+    IconMdiGithub: typeof import('~icons/mdi/github')['default']
     IconRiCheckLine: typeof import('~icons/ri/check-line')['default']
     IconRiForbidLine: typeof import('~icons/ri/forbid-line')['default']
+    IconRiFullscreenExitFill: typeof import('~icons/ri/fullscreen-exit-fill')['default']
+    IconRiFullscreenFill: typeof import('~icons/ri/fullscreen-fill')['default']
+    IconRiMoonFill: typeof import('~icons/ri/moon-fill')['default']
     IconRiMoonLine: typeof import('~icons/ri/moon-line')['default']
     IconRiNotificationBadgeFill: typeof import('~icons/ri/notification-badge-fill')['default']
     IconRiSettings3Line: typeof import('~icons/ri/settings3-line')['default']

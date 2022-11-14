@@ -8,6 +8,9 @@ export default defineConfig({
     ['border', { border: '1px solid red' }],
     ['pink', { color: 'pink' }]
   ],
+  shortcuts: {
+    'flex-center': 'flex justify-center items-center'
+  },
   theme: {
     colors: {
       primary: 'var(--primary-color)',

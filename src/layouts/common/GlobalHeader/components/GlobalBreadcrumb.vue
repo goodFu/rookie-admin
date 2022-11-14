@@ -2,7 +2,11 @@
   <n-breadcrumb class="px-12px">
     <template v-for="breadcrumb in breadcrumbs" :key="breadcrumb.key">
       <n-breadcrumb-item>
-        <n-dropdown v-if="breadcrumb.hasChildren" :options="breadcrumb.children" @select="dropdownSelect">
+        <n-dropdown
+          v-if="breadcrumb.hasChildren"
+          :options="breadcrumb.children"
+          @select="dropdownSelect"
+        >
           <span>
             <component
               :is="breadcrumb.icon"
@@ -42,12 +46,14 @@ const routeStore = useRouteStore();
 const { routerPush } = useRouterPush();
 
 const breadcrumbs = computed(() =>
-  getBreadcrumbByRouteKey(route.name as string, routeStore.menus as GlobalMenuOption[], routePath('root'))
+  getBreadcrumbByRouteKey(
+    route.name as string,
+    routeStore.menus as GlobalMenuOption[],
+    routePath('root')
+  )
 );
 
 function dropdownSelect(key: string) {
   routerPush({ name: key });
 }
 </script>
-
-<style scoped></style>

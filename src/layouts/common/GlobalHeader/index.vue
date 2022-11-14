@@ -16,11 +16,10 @@
     <!-- <header-menu v-else /> -->
     <div class="flex justify-end h-full">
       <!-- <global-search />
-      <github-site />
-      <full-screen />
-      <theme-mode />
-      <system-message />
-      <setting-button /> -->
+      <system-message /> -->
+      <GithubSite />
+      <FullScreen />
+      <ThemeMode />
       <SettingButton />
       <UserAvatar />
     </div>
@@ -42,7 +41,7 @@ import GlobalLogo from '../GlobalLogo/index.vue';
 // // ThemeMode,
 // // UserAvatar
 // './components';
-import { UserAvatar, SettingButton } from './components';
+import { UserAvatar, SettingButton, ThemeMode, FullScreen, GithubSite } from './components';
 
 defineOptions({ name: 'GlobalHeader' });
 
