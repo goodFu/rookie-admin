@@ -7,7 +7,7 @@ index 93037c663e99d4d16b60f4cee9ebf6836b09a29d..ec641d42030826b017ae317b95380bc0
  
  if (!fs_1.existsSync(filePath)) {
 -  var url = process.env.GITMOJI_URL || 'https://raw.githubusercontent.com/carloscuesta/gitmoji/master/src/data/gitmojis.json';
-+  var url = process.env.GITMOJI_URL || 'https://tianli-lida-children.oss-cn-chengdu.aliyuncs.com/other/gitmojis.json';
++  var url = process.env.GITMOJI_URL || 'https://typora-rookie.oss-cn-hangzhou.aliyuncs.com/gitmojis/gitmojis.json';
  
    try {
      // eslint-disable-next-line global-require
