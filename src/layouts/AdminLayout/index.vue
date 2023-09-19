@@ -40,7 +40,6 @@
       <n-button type="warning"> Warning </n-button>
       <n-button type="error"> Error </n-button>
     </n-space>
-    123
   </BasicLayout>
   <GlobalBackTop />
   <SettingDrawer />
